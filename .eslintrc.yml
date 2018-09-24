@@ -1,0 +1,22 @@
+extends: airbnb-base
+rules:
+  indent:
+    - error
+    - tab
+  no-tabs:
+    - off
+  no-use-before-define:
+    - error
+    - functions: false
+  no-duplicate-imports:
+    - error
+  semi:
+    - error
+    - never
+  camelcase:
+    - error
+    - properties: always
+  import/prefer-default-export:
+    - off
+  no-prototype-builtins:
+    - off

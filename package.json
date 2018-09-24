@@ -1,0 +1,43 @@
+{
+  "name": "base-mailer",
+  "version": "0.0.0",
+  "description": "Base Mailer for SendinBlue",
+  "author": "Blixar",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "pm2 start pm2-dev.json",
+    "stop": "pm2 stop mailer --watch",
+    "remove": "pm2 delete mailer",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PabloAlice/base-mailer"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-plugin-import": "^2.7.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "node-fetch": "^1.7.3",
+    "pm2": "^2.9.1",
+    "sib-api-v3-sdk": "^7.0.2",
+    "winston": "^2.3.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}

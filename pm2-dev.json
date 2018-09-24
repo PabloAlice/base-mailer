@@ -1,0 +1,7 @@
+{
+  "name": "mailer",
+  "script": "src/app.js",
+  "node_args": ["--inspect"],
+  "exec_interpreter": "babel-node",
+  "watch": ["src"]
+}

@@ -1,13 +1,10 @@
 import bodyParser from 'body-parser'
-import dotenv from 'dotenv'
 import express from 'express'
 import winston from 'winston'
 
 import { setUpLogger } from './config/app-config'
 import { EmailController } from './controllers/EmailController'
 import { errorHandler } from './errors/errorHandler'
-
-dotenv.config()
 
 setUpLogger()
 

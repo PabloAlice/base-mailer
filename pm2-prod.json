@@ -1,0 +1,5 @@
+{
+  "name": "mailer",
+  "script": "src/app.js",
+  "exec_interpreter": "babel-node"
+}

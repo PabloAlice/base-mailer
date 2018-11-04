@@ -1,7 +1,8 @@
 import { Router } from 'express'
 
-import * as EmailService from '../services/EmailService'
-import { wrap } from '../utils/requestHandlerWrapper'
+import * as EmailService from '../../services/EmailService'
+import { validate } from './validator'
+import { wrap } from '../../utils/requestHandlerWrapper'
 
 export const EmailController = Router()
 
@@ -19,6 +20,8 @@ export const EmailController = Router()
 }
  */
 EmailController.post('/email', wrap(async (req, res) => {
-	const messageId = await EmailService.sendEmail(req.body)
+	const { body } = req
+	validate(body)
+	const messageId = await EmailService.sendEmail(body)
 	return res.status(200).json({ messageId })
 }))

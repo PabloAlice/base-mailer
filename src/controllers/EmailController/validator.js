@@ -6,10 +6,6 @@ export const schema = Joi.object({
 		email: Joi.string().email().required(),
 		name: Joi.string(),
 	})).required(),
-	params: Joi.object({
-		ANOMALY_TYPE: Joi.string().required(),
-		TIMESTAMP: Joi.alternatives().try(Joi.string(), Joi.number()).required(),
-	}).required(),
 }).required()
 
 export function validate(body) {

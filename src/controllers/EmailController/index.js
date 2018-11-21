@@ -13,10 +13,6 @@ export const EmailController = Router()
  * body:
  * {
 	"to": [{"email": "some-email@domain.com"}],
-	"params": {
-		"ANOMALY_TYPE": "CUALITATIVA",
-		"TIMESTAMP": 12323456654567
-	}
 }
  */
 EmailController.post('/email', wrap(async (req, res) => {
